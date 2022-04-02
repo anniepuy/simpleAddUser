@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Card.module.css'
 
-const Card = props => {
+const Card = (props) => {
 
 //addition of template literals in className passes CSS properties as props
     return (
