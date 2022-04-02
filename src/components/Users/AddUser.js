@@ -20,8 +20,8 @@ const AddUser = (props) => {
         if(+enteredAge < 1) {
             return;
         }
-
-        console.log(enteredUsername, enteredAge);
+        //forwarding data up to app.js
+        props.onAddUser(enteredUsername, enteredAge);
         setEnteredUsername('');
         setEnteredAge('');
     };
@@ -38,7 +38,7 @@ const AddUser = (props) => {
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
                 <label htmlFor='username'>Username</label>
-                <input id='username' 
+                <input id='username'
                 type="text" 
                 value={enteredUsername} 
                 onChange={usernameChangeHandler} 
